@@ -1,0 +1,10 @@
+{
+    "jwtSecret": "secret",
+    "successRedirect": "http://authapp.com",
+    "failureRedirect": "http://authapp.com",    
+    "google": {
+        "clientID": "229557082220-76ael2nfo0jtqsqjq2dt8alimp0iu1ts.apps.googleusercontent.com",
+        "clientSecret": "i-V3JpO5hP1U1Pl9Kd5VnmkD",
+        "callbackURL": "http://auth.authapp.com/google/callback"
+    }
+}

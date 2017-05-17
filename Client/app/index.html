@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title> index </title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-cookies.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+
+
+    <!--<script type="text/javascript" src="/home/yaron/Documents/workspace/AuthPlayground/Client/node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="/home/yaron/Documents/workspace/AuthPlayground/Client/node_modules/angular-cookies/angular-cookies.js"></script>
+    <script type="text/javascript" src="/home/yaron/Documents/workspace/AuthPlayground/Client/node_modules/angular-jwt/dist/angular-jwt.js"></script>-->
+  </head>  
+  <body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+      <h3> welcome </h3>
+      {{user}}
+    </div>
+
+    <script>
+      var app = angular.module('myApp', ['ngCookies', 'angular-jwt']);
+      app.controller('myCtrl', function($scope, $cookies, jwtHelper) {
+          $scope.user = jwtHelper.decodeToken($cookies.get('token'));
+      });
+    </script>
+
+  </body>
+</html>
